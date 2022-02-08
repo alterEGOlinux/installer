@@ -297,7 +297,7 @@ class Installer:
 
         message('action', f"Preparing arch-root...", wait=0)
 
-        os.mkdirs('/mnt/usr/local/alterEGO/installer')
+        os.makedirs('/mnt/usr/local/alterEGO/installer')
         execute(f'arch-chroot /mnt git clone https://github.com/alterEGOlinux/installer.git /usr/local/alterEGO/installer')
         execute(f'arch-chroot /mnt python /usr/local/alterEGO/installer/installer.py --sysconfig {self.mode}')
 
