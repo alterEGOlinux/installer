@@ -11,6 +11,7 @@ import argparse
 from collections import namedtuple
 import os
 import shlex
+import shutil
 import subprocess
 import time
 
@@ -207,9 +208,9 @@ def packages_list(required_by, mode=None):
 def git_clone(name, remote, local):
     message('action', f"Cloning {remote}.", wait=0)
     if not os.path.isdir(local):
-        sysutils.execute(f"git clone {remote} {local}")
+        execute(f"git clone {remote} {local}")
     else:
-        sysutils.execute(f"git -C {local} pull")
+        execute(f"git -C {local} pull")
 
 ## [ INSTALLER CLASS ] ----------------------------------------------------- ##
 
