@@ -302,7 +302,7 @@ class Installer:
         execute(f'arch-chroot /mnt python /usr/local/alterEGO/installer/installer.py --sysconfig {self.mode}')
 
     def git_clone_ael(self):
-        git_clone('https://github.com/alterEGOlinux/filesystem.git', '/usr/local/alterEGO/')
+        git_clone('https://github.com/alterEGOlinux/filesystem.git', '/usr/local/alterEGO/filesystem')
 
     def set_time(self):
         message('action', f"Setting clock and timezone...", wait=0)
