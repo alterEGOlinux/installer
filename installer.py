@@ -205,7 +205,7 @@ def packages_list(required_by, mode=None):
 
     return pkgs_list
 
-def git_clone(name, remote, local):
+def git_clone(remote, local):
     message('action', f"Cloning {remote}.", wait=0)
     if not os.path.isdir(local):
         execute(f"git clone {remote} {local}")
@@ -302,7 +302,7 @@ class Installer:
         execute(f'arch-chroot /mnt python /usr/local/alterEGO/installer/installer.py --sysconfig {self.mode}')
 
     def git_clone_ael(self):
-        git_clone('filesystem', 'https://github.com/alterEGOlinux/filesystem.git', '/usr/local/alterEGO/')
+        git_clone('https://github.com/alterEGOlinux/filesystem.git', '/usr/local/alterEGO/')
 
     def set_time(self):
         message('action', f"Setting clock and timezone...", wait=0)
@@ -335,7 +335,7 @@ class Installer:
         message('result', f"Enabling NetworkManager daemon...", wait=0)
         execute(f'systemctl enable NetworkManager.service')
 
-    def deploy_files(src, dst):
+    def deploy_files(self, src, dst):
         '''
         The src is the source root directory.
         The dest is the source root of the destination.
