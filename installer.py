@@ -499,8 +499,8 @@ def main():
         installer.set_network()
 
         ## ( DEPLOY FILES )
-        if mode not in ['bare']:
-            installer.deploy_files('/', '/usr/local/alterEGO')
+        if mode not in ['barre']:
+            installer.deploy_files('', '/usr/local/alterEGO')
 
         ## ( USERS and PASSWORDS )
         installer.users()
