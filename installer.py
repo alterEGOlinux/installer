@@ -298,11 +298,11 @@ class Installer:
         message('action', f"Preparing arch-root...", wait=0)
 
         os.mkdir('/mnt/usr/local/alterEGO')
-        execute(f'arch-chroot /mnt git clone https://github.com/alterEGOlinux/installer.git /usr/local/alterEGO')
+        execute(f'arch-chroot /mnt git clone https://github.com/alterEGOlinux/installer.git /usr/local/alterEGO/')
         execute(f'arch-chroot /mnt python /usr/local/alterEGO/installer/installer.py --sysconfig {self.mode}')
 
     def git_clone_ael(self):
-        git_clone('filesystem', 'https://github.com/alterEGOlinux/filesystem.git', '/usr/local/alterEGO')
+        git_clone('filesystem', 'https://github.com/alterEGOlinux/filesystem.git', '/usr/local/alterEGO/')
 
     def set_time(self):
         message('action', f"Setting clock and timezone...", wait=0)
