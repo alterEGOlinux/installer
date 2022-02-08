@@ -9,6 +9,7 @@
 
 import argparse
 from collections import namedtuple
+import os
 import shlex
 import subprocess
 import time
@@ -497,7 +498,7 @@ def main():
         installer.set_network()
 
         ## ( DEPLOY FILES )
-        if mode not in ['base']:
+        if mode not in ['bare']:
             installer.deploy_files('/', '/usr/local/alterEGO')
 
         ## ( USERS and PASSWORDS )
