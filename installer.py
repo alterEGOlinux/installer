@@ -390,7 +390,7 @@ class Installer:
             fstab_file.write("/swapfile none swap defaults 0 0")
 
     def aur(self):
-        git_clone('paru', 'https://aur.archlinux.org/paru.git', f"/opt/.build/paru")
+        git_clone('https://aur.archlinux.org/paru.git', f"/opt/.build/paru")
         execute(f"chown -R {user}:users /opt/.build/paru")
         execute(f"su {user} -c 'makepkg -si --needed --noconfirm'", cwd='/opt/.build/paru')
 
@@ -499,8 +499,8 @@ def main():
         installer.set_network()
 
         ## ( DEPLOY FILES )
-        if mode not in ['barre']:
-            installer.deploy_files('', '/usr/local/alterEGO')
+        if mode not in ['bare']:
+            installer.deploy_files('/usr/local/alterEGO', '/' )
 
         ## ( USERS and PASSWORDS )
         installer.users()
