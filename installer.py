@@ -299,7 +299,7 @@ class Installer:
 
         os.makedirs('/mnt/usr/local/alterEGO/installer')
         execute(f'arch-chroot /mnt git clone https://github.com/alterEGOlinux/installer.git /usr/local/alterEGO/installer')
-        execute(f'arch-chroot /mnt python /usr/local/alterEGO/installer/installer.py --sysconfig {self.mode}')
+        execute(f'arch-chroot /mnt python /usr/local/alterEGO/installer/installer.py --sysconfig {self.mode} | tee -a /root/output.txt', shell=True)
 
     def git_clone_ael(self):
         git_clone('https://github.com/alterEGOlinux/filesystem.git', '/usr/local/alterEGO/filesystem')
