@@ -3,7 +3,7 @@
 ##                                                                           ##
 ## alterEGOlinux/installer/installer.py                                      ##
 ##   created        : 2022-02-02 11:53:41 UTC                                ##
-##   updated        : 2022-02-08 11:27:40 UTC                                ##
+##   updated        : 2022-03-29 11:05:04 UTC                                ##
 ##   description    : Install alterEGO Linux.                                ##
 ## _________________________________________________________________________ ##
 
@@ -25,6 +25,7 @@ user_passwd = 'password1'
 
 Package = namedtuple('Package', ['name', 'repository', 'mode'])
 packages = [
+    Package('alacritty', 'official', ['bare', 'minimal', 'beast']),
     Package('alsa-utils', 'official', ['bare', 'minimal', 'beast']),
     Package('arp-scan', 'official', ['bare', 'minimal', 'beast']),
     Package('bash-completion', 'official', ['bare', 'minimal', 'beast']),
@@ -35,10 +36,14 @@ packages = [
     Package('bleachbit', 'official', ['bare', 'minimal', 'beast']),
     Package('bpytop', 'official', ['bare', 'minimal', 'beast']),
     Package('brave-bin', 'aur', ['bare', 'minimal', 'beast']),
+    Package('brightnessctl', 'official', ['bare', 'minimal', 'beast']),
+    Package('bumblebee-status-git', 'aur', ['bare', 'minimal', 'beast']),
     Package('burpsuite', 'aur', ['bare', 'minimal', 'beast']),
     Package('cmatrix', 'official', ['bare', 'minimal', 'beast']),
     Package('code', 'official', ['bare', 'minimal', 'beast']),
     Package('cronie', 'official', ['bare', 'minimal', 'beast']),
+    Package('crunch', 'aur', ['beast']),
+    Package('dex', 'official', ['bare', 'minimal', 'beast']),
     Package('dirbuster', 'aur', ['bare', 'minimal', 'beast']),
     Package('docker', 'official', ['bare', 'minimal', 'beast']),
     Package('dos2unix', 'official', ['bare', 'minimal', 'beast']),
@@ -83,6 +88,7 @@ packages = [
     Package('networkmanager', 'official', ['bare', 'minimal', 'beast']),
     Package('nfs-utils', 'official', ['bare', 'minimal', 'beast']),
     Package('nikto', 'official', ['bare', 'minimal', 'beast']),
+    Package('nitrogen', 'official', ['bare', 'minimal', 'beast']),
     Package('nmap', 'official', ['bare', 'minimal', 'beast']),
     Package('ntfs-3g', 'official', ['bare', 'minimal', 'beast']),
     Package('openssh', 'official', ['bare', 'minimal', 'beast']),
@@ -128,6 +134,7 @@ packages = [
     Package('traceroute', 'official', ['bare', 'minimal', 'beast']),
     Package('transmission-gtk', 'official', ['bare', 'minimal', 'beast']),
     Package('tree', 'official', ['bare', 'minimal', 'beast']),
+    Package('ttf-symbola', 'aur', ['bare', 'minimal', 'beast']),
     Package('ufw', 'official', ['bare', 'minimal', 'beast']),
     Package('unrar', 'official', ['bare', 'minimal', 'beast']),
     Package('unzip', 'official', ['bare', 'minimal', 'beast']),
@@ -144,7 +151,9 @@ packages = [
     Package('xdotool', 'official', ['bare', 'minimal', 'beast']),
     Package('xfce4-terminal', 'official', ['bare', 'minimal', 'beast']),
     Package('xorg-server', 'official', ['bare', 'minimal', 'beast']),
+    Package('xorg-xev', 'official', ['bare', 'minimal', 'beast']),
     Package('xorg-xinit', 'official', ['bare', 'minimal', 'beast']),
+    Package('xorg-xrandr', 'official', ['bare', 'minimal', 'beast']),
     Package('xterm', 'official', ['bare', 'minimal', 'beast']),
     Package('youtube-dl', 'official', ['bare', 'minimal', 'beast']),
     Package('zaproxy', 'official', ['bare', 'minimal', 'beast']),

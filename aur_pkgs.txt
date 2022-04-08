@@ -1,0 +1,1 @@
+brave-bin bumblebee-status-git burpsuite crunch dirbuster gobuster-git gromit-mpx-git inxi librespeed-cli-bin pandoc-bin powershell-bin rustscan simple-mtpfs ttf-symbola wfuzz-git
