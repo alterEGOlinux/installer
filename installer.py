@@ -3,7 +3,7 @@
 ##                                                                           ##
 ## alterEGOlinux/installer/installer.py                                      ##
 ##   created        : 2022-02-02 11:53:41 UTC                                ##
-##   updated        : 2022-03-29 11:05:04 UTC                                ##
+##   updated        : 2022-04-08 14:25:02 UTC                                ##
 ##   description    : Install alterEGO Linux.                                ##
 ## _________________________________________________________________________ ##
 
@@ -76,6 +76,7 @@ packages = [
     Package('libreoffice-fresh', 'official', ['bare', 'minimal', 'beast']),
     Package('librespeed-cli-bin', 'aur', ['bare', 'minimal', 'beast']),
     Package('linux', 'official', ['bare', 'minimal', 'beast']),
+    Package('lxappearance', 'official', ['bare', 'minimal', 'beast']),
     Package('lynx', 'official', ['bare', 'minimal', 'beast']),
     Package('man-db', 'official', ['bare', 'minimal', 'beast']),
     Package('man-pages', 'official', ['bare', 'minimal', 'beast']),
@@ -134,6 +135,7 @@ packages = [
     Package('traceroute', 'official', ['bare', 'minimal', 'beast']),
     Package('transmission-gtk', 'official', ['bare', 'minimal', 'beast']),
     Package('tree', 'official', ['bare', 'minimal', 'beast']),
+    Package('ttf-font-awesome-4', 'aur', ['bare', 'minimal', 'beast']),
     Package('ttf-symbola', 'aur', ['bare', 'minimal', 'beast']),
     Package('ufw', 'official', ['bare', 'minimal', 'beast']),
     Package('unrar', 'official', ['bare', 'minimal', 'beast']),
